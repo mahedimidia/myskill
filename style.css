@@ -1,143 +1,129 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'roboto', sans-serif;
-    box-sizing: border-box;
-}
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  
+  .lnr {
+    display: inline-block;
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.05em;
+    stroke-width: 1;
+  }
+  
+  .services-icon {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  .bgc2, .vLine, .hLine{
+      background-color: #0F52BA;
+  }
+  
+  .quote-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  .services-icon {
+      font-size: 60px;
+      margin-left: 2rem;
+  }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #222;
-   
-}
+  /* ---------card--------- */
 
-
-.container{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-
-
-
-
-.container .card{
-    position: relative;
-    width: 220px;
-    height: 250px;
-    background: #2a2a2a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.container .card .percent{
-    position: relative;
-    width: 150px;
-    height: 150px;
-    
-
-}
-.container .card .percent svg{
-    position: relative;
-    width: 150px;
-    height: 150px;
-    transform: rotate(270deg);
-}
-.container .card .percent svg circle{
-        width: 100%;
-        height: 100%;
-        fill: transparent;
-        stroke-width: 2;
-        stroke: #191919;
-        transform: translate(5px, 5px);
-}
-.container .card .percent svg circle:nth-child(2){
-    stroke: var(--clr);
-    stroke-dasharray: 440;
-    stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
-    animation: fadeIn 1s linear forwards;
-    animation-delay: 2.5s;
-    opacity: 0;
-   
-
-}
-@keyframes fadeIn
-{
-    0%{
-            opacity: 0;
+  .card{
+    transition: 0.4s ease all;
+    padding: 1rem;
+  }
+  @media(min-width:992px){
+    .card:hover{
+        margin-top: -.1rem;
+        margin-bottom: 0.1rem;
     }
-    100%{
-        opacity: 1;
-    }
+  }
+
+  /* --------footer--------- */
+
+  @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+section {
+    padding: 60px 0;
 }
 
-
-.dot{
-    position: absolute;
-    inset: 5px;
-    z-index: 10;
-    
-    animation: animateDot 2s linear forwards;
-}
-@keyframes animateDot {
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(calc(3.6deg * var(--num)));
-    }
-}
-.dot::before{
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--clr);
-    box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
-
-}
-
-.number{
-    position: absolute;
-    inset: 0;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    animation: fadeIn 1s linear forwards;
-    animation-delay: 2.5s;
-    opacity: 0;
-}
-.number h2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-weight: 700;
-    font-size: 2.5em;
-}
-.number h2 span{
-     font-weight: 300;
-     color: #fff;
-     font-size: 0.5em;
-}
-.number p{
-    font-weight: 300;
-    color: rgba(255,255,255,0.75);
-    font-size: 0.75em;
-    letter-spacing: 2px;
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
     text-transform: uppercase;
+}
+#footer {
+    background: #007b5e !important;
+}
+#footer h5{
+	padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:25px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+	font-size:30px;
+	margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#ffffff;
+}
+#footer ul.social li a:hover{
+	color:#eeeeee;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
 }
